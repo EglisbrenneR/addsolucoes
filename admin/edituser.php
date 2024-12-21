@@ -25,6 +25,7 @@
                 $cidade = $user_data['cidade'];
                 $estado = $user_data['estado'];
                 $endereco = $user_data['endereco'];
+                $nivel_de_acesso = $_POST['nivel_de_acesso'];
 
             }
             print_r($nome);
@@ -175,6 +176,16 @@
                     <input type="text" name="endereco" id="endereco" class="inputUser" value="<?php echo $endereco ?>" required>
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
+                <br><br>
+                <P>Nivel de Acesso:</P>
+                <input type="radio" id="administrador" name="nivel_de_acesso" value="administrador" <?php echo ($nivel_de_acesso == 'administrador') ? 'checked' : '' ?> required>
+                <label for="administrador">ADMINISTRADOR</label>
+                <br>
+                <input type="radio" id="colaborador" name="nivel_de_acesso" value="colaborador" <?php echo ($nivel_de_acesso == 'colaborador') ? 'checked' : '' ?> required>
+                <label for="colaborador">COLABORADOR</label>
+                <br>
+                <input type="radio" id="cliente" name="nivel_de_acesso" value="cliente" <?php echo ($nivel_de_acesso== 'cliente') ? 'checked' : '' ?> required>
+                <label for="cliente">CLIENTE</label>
                 <br><br>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="submit" name="update" id="update">

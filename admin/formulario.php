@@ -29,9 +29,10 @@
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
         $endereco = $_POST['endereco'];
+        $nivel_de_acesso = $_POST['nivel_de_acesso'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuario(nome,email,senha,telefone,sexo,data_nasc,cidade,estado,endereco) 
-        VALUES ('$nome','$email','$senha','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+        $result = mysqli_query($conexao, "INSERT INTO usuario(nome,email,senha,telefone,sexo,data_nasc,cidade,estado,endereco,nivel_de_acesso) 
+        VALUES ('$nome','$email','$senha','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco','$nivel_de_acesso')");
 
         header('Location: login.php');
     }
@@ -156,22 +157,32 @@
                 <br><br>
                 <label for="data_nascimento"><b>Data de Nacimento</b></label>
                 <input type="date" name="data_nascimento" id="data_nascimento" required>
-                <br><br><br>
+                <br><br>
                 <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
                     <label for="cidade" class="labelInput">Cidade</label>
                 </div>
-                <br><br>
+                <br>
                 <div class="inputBox">
                     <input type="text" name="estado" id="estado" class="inputUser" required>
                     <label for="estado" class="labelInput">Estado</label>
                 </div>
-                <br><br>
+                <br>
                 <div class="inputBox">
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
-                <br><br>
+                <br>
+                <P>Nivel de Acesso:</P>
+                <input type="radio" id="administrador" name="nivel_de_acesso" value="1"required>
+                <label for="administrador">ADMINISTRADOR</label>
+                <br>
+                <input type="radio" id="colaborador" name="nivel_de_acesso" value="2"required>
+                <label for="colaborador">COLABORADOR</label>
+                <br>
+                <input type="radio" id="cliente" name="nivel_de_acesso" value="3"required>
+                <label for="cliente">CLIENTE</label>
+                <br><br><br>
                 <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>

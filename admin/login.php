@@ -46,7 +46,6 @@
     </style>
 </head>
 <body>
-    <a href="home.php">Voltar</a>
     <div>
         <h1>LOGIN</h1>
         <form action="testlogin.php" method="POST">

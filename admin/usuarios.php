@@ -94,6 +94,7 @@
                 <th scope="col">CIDADE</th>
                 <th scope="col">ESTADO</th>
                 <th scope="col">ENDEREÇO</th>
+                <th scope="col">NIVEL DE ACESSO</th>
                 <th scope="col">AÇÕES</th>
             </tr>
         </thead>
@@ -112,6 +113,7 @@
                     echo "<td>".$user_data['cidade']."</td>";
                     echo "<td>".$user_data['estado']."</td>";
                     echo "<td>".$user_data['endereco']."</td>";
+                    echo "<td>".$user_data['nivel_de_acesso']."</td>";
                     echo "<td>
                         <a class='btn btn-sm btn-primary' href ='edituser.php?id=$user_data[id]'>
                             <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>

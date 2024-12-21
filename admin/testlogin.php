@@ -48,7 +48,9 @@
                 'nome'      => $result[0]['nome'],
                 'imagem'    =>'' /* $testeLogin[0]['anexo'] */,
                 'logado'    => true,
+                'acesso'    => $result[0]['nivel_de_acesso']
             ];
+            
 
             header('Location: sistema.php');
        }

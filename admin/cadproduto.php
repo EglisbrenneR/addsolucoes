@@ -137,11 +137,13 @@
                         <span class="sub-item">CADASTRO DE PRODUTO</span>
                       </a>
                     </li>
-                    <li>
+                    <?php if($_SESSION['usuario']['acesso'] == '1'){ ?>
+                      <li>
                     <a href="formulario.php">
                         <span class="sub-item">CADASTRO DE USUARIO</span>
                       </a>
                     </li>
+                    <?php } ?>
                   </ul>
                 </div>
               </li>
@@ -153,11 +155,13 @@
                 </a>
                 <div class="collapse" id="tables">
                   <ul class="nav nav-collapse">
+                  <?php if($_SESSION['usuario']['acesso'] == '1'){ ?>
                     <li>
                       <a href="pagusuarios.php">
                         <span class="sub-item" active>USUARIOS</span>
                       </a>
                     </li>
+                    <?php } ?>
                     <li>
                       <a href="pagprodutos.php">
                         <span class="sub-item">PRODUTOS</span>
@@ -179,11 +183,13 @@
                         <span class="sub-item">LOGIN</span>
                       </a>
                     </li>
+                    <?php if($_SESSION['usuario']['acesso'] == '1'){ ?>
                     <li>
                       <a href="edituser.php">
                         <span class="sub-item">EDITAR CAD. USUARIOS</span>
                       </a>
                     </li>
+                    <?php } ?>
                     <li>
                       <a href="sair.php">
                         <span class="sub-item">SAIR</span>
