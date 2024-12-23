@@ -13,9 +13,15 @@ $result_count = "SELECT COUNT(*) AS total FROM produto";
 $resultado_count = mysqli_query($conexao, $result_count);
 $total_produtos = mysqli_fetch_assoc($resultado_count)['total'];
 
-// Consulta para obter os produtos com limite e offset
-$result_produtos = "SELECT * FROM produto LIMIT $produtos_por_pagina OFFSET $offset";
+// Consulta para obter os produtos com limite e offset, ordenando disponíveis primeiro
+$result_produtos = "
+    SELECT * 
+    FROM produto 
+    ORDER BY (promocao = 'Não') ASC 
+    LIMIT $produtos_por_pagina 
+    OFFSET $offset";
 $resultado_produtos = mysqli_query($conexao, $result_produtos);
+
 $total_paginas = ceil($total_produtos / $produtos_por_pagina);
 ?>
 
@@ -28,42 +34,51 @@ $total_paginas = ceil($total_produtos / $produtos_por_pagina);
 
     <style>
         .thumbnail {
-            text-align: center; /* Centraliza o texto */
-            padding: 15px; /* Espaçamento interno */
-            border: none; /* Remove a borda */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-            height: 350px; /* Altura fixa para todas as thumbnails */
-            overflow: hidden; /* Evita que o conteúdo ultrapasse */
+            text-align: center;
+            padding: 15px;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            overflow: hidden;
         }
         .thumbnail img {
-            width: 100%; /* Ajusta a largura da imagem */
-            height: 200px; /* Altura fixa para as imagens */
-            object-fit: cover; /* Mantém a proporção e cobre o espaço */
-            cursor: pointer; /* Muda o cursor para indicar que a imagem é clicável */
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
         }
         .caption {
-            margin-top: 10px; /* Espaço acima da legenda */
+            margin-top: 10px;
         }
         .btn-comprar {
-            margin-top: 10px; /* Espaçamento acima do botão */
-            width: 100%; /* Botão ocupa toda a largura disponível */
+            margin-top: 10px;
+            width: 100%;
         }
         .pagination {
-            display: flex; /* Utiliza flexbox para centralizar */
-            justify-content: center; /* Centraliza horizontalmente */
-            margin: 20px 0; /* Espaço acima e abaixo da paginação */
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
         }
         .pagination a {
-            margin: 0 5px; /* Espaço entre os botões de página */
-            padding: 10px 15px; /* Espaçamento interno dos botões */
-            text-decoration: none; /* Remove o sublinhado */
-            border: 1px solid #007bff; /* Borda azul */
-            color: #007bff; /* Texto azul */
-            border-radius: 5px; /* Cantos arredondados */
+            margin: 0 5px;
+            padding: 10px 15px;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            color: #007bff;
+            border-radius: 5px;
         }
         .pagination a.active {
-            background-color: #007bff; /* Fundo azul quando ativo */
-            color: white; /* Texto branco quando ativo */
+            background-color: #007bff;
+            color: white;
+        }
+        .indisponivel {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .btn-indisponivel {
+            background-color: #ccc;
+            color: #666;
+            cursor: not-allowed;
         }
     </style>
 </head>
@@ -73,9 +88,11 @@ $total_paginas = ceil($total_produtos / $produtos_por_pagina);
             <h3>NOSSOS PRODUTOS</h3>
         </div>
         <div class="row">
-            <?php while($rows_produtos = mysqli_fetch_assoc($resultado_produtos)) { ?>
+            <?php while ($rows_produtos = mysqli_fetch_assoc($resultado_produtos)) { 
+                $indisponivel = $rows_produtos['promocao'] == 'Não'; // Verifica se o produto está indisponível
+            ?>
                 <div class="col-sm-5 col-md-3">
-                    <div class="thumbnail">
+                    <div class="thumbnail <?php echo $indisponivel ? 'indisponivel' : ''; ?>">
                         <img src="<?php echo 'admin/imagens/uploads/' . htmlspecialchars($rows_produtos['imagem']); ?>" 
                              alt="<?php echo htmlspecialchars($rows_produtos['nome']); ?>" 
                              data-bs-toggle="modal" 
@@ -87,16 +104,16 @@ $total_paginas = ceil($total_produtos / $produtos_por_pagina);
                             <a href="detalhes.php?id_curso=<?php echo htmlspecialchars($rows_produtos['id']); ?>">
                                 <h5><?php echo htmlspecialchars($rows_produtos['nome']); ?></h5>
                             </a>
-                            <?php
-                            $whatsappNumber = '+55 88 99790-5780'; // Substitua pelo número do vendedor
-                            $productId = $rows_produtos['codigo'];
-                            $productName = $rows_produtos['nome'];
-                            $message = urlencode("Olá, gostaria de comprar o produto ID: $productId - Nome: $productName");
-                            ?>
-                            <p>
-                                <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=<?php echo $message; ?>" 
-                                   class="btn btn-primary btn-comprar" role="button" target="_blank">Comprar</a>
-                            </p>
+                            <?php if (!$indisponivel) { ?>
+                                <p>
+                                    <a href="https://api.whatsapp.com/send?phone=<?php echo $whatsappNumber; ?>&text=Olá, gostaria de comprar o produto ID: <?php echo $rows_produtos['codigo']; ?> - Nome: <?php echo $rows_produtos['nome']; ?>" 
+                                       class="btn btn-primary btn-comprar" role="button" target="_blank">Comprar</a>
+                                </p>
+                            <?php } else { ?>
+                                <p>
+                                    <button class="btn btn-indisponivel" disabled>Indisponível</button>
+                                </p>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

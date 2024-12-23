@@ -681,108 +681,101 @@
           </div>
 
           <?php
-            $id = "";
-            $nome = "";
-            $codigo = "";
-            $descricao = "";
-            $promocao = "";
-            $action = "insert";
+$id = "";
+$nome = "";
+$codigo = "";
+$descricao = "";
+$promocao = "";
+$action = "insert";
 
-          ?>
-          <?php
-          if (isset($_GET['id'])){
-            $idGet = $_GET['id'];
-            $itemProduto = buscaUnica($connect, "produto", $idGet);
-            if (!empty($itemProduto['nome'])) {
-                $id = $itemProduto['id'];
-                $nome = $itemProduto['nome'];
-                $codigo = $itemProduto['codigo'];
-                $descricao = $itemProduto['descricao'];
-                $promocao = $itemProduto['promocao'];
-                $action = "update";
-            }
-            if (isset($_POST['update'])) {
-              updateProduto($connect);
-            }
+// Verificar se é uma edição
+if (isset($_GET['id'])) {
+    $idGet = $_GET['id'];
+    $itemProduto = buscaUnica($connect, "produto", $idGet);
 
-          ?>
-          <?php } ?>
+    if (!empty($itemProduto['nome'])) {
+        $id = $itemProduto['id'];
+        $nome = $itemProduto['nome'];
+        $codigo = $itemProduto['codigo'];
+        $descricao = $itemProduto['descricao'];
+        $promocao = $itemProduto['promocao'];
+        $action = "update";
+    }
+}
+?>
 
-          <!--começo tabela de usuario -->
-                  <section class="content-header">
-                      <div class="container-fluid">
-                        <!-- general form elements disabled -->
-                        <div class="card card">
-                          <div class="card-header">
-                            <h3 class="card-title">EDITAR / CADASTRO DE PRODUTO</h3>
-                          </div>
-                          <!-- /.card-header -->
-                          <div class="card-body">
-                            <form method="post"  action="configproduto.php" enctype="multipart/form-data">
-                              <div class="row">
-                                    <input value="<?php echo $id; ?>" type="hidden" name="id"  required>
-                                </div>
-                                <div class="col-sm-4">
-                                  <!-- text input -->
-                                  <div class="form-group">
-                                    <label>NOME DO PRODUTO</label>
-                                    <input value="<?php echo $nome; ?>" type="text" name="nome" class="form-control" placeholder="Ex: NOTEBOOK GAMER" required>
-                                  </div>
-                                </div>
-                                
-                                <div>
-                                  <?php if (!empty($itemProduto['imagem'])) {?>
-                                    <img src="imagens/uploads/<?php echo $itemProduto['imagem']; ?>" alt="">
+<!-- Formulário -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="card card">
+            <div class="card-header">
+                <h3 class="card-title">EDITAR / CADASTRO DE PRODUTO</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" action="configproduto.php" enctype="multipart/form-data">
+                    <!-- ID oculto -->
+                    <input type="hidden" name="id" value="<?php echo $id; ?>" required>
 
-                                  <?php }?>
-                                </div>
-
-                                <div class="col-sm-4">
-                                  <div class="form-group">
-                                    <label>IMAGEM</label>
-                                    <input type="file" name="imagem" class="form-control" placeholder="imagem" multiple>
-                                  </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                  <!-- text input -->
-                                  <div class="form-group">
-                                    <label>CODIGO DO PRODUTO</label>
-                                    <input value="<?php echo $codigo; ?>" type="text" name="codigo" class="form-control" placeholder="Ex: 25465998521">
-                                  </div>
-                                </div>
-                                <div class="col-sm-8">
-                                  <div class="form-group">
-                                    <label>DESCRIÇÃO</label>
-                                    <input value="<?php echo $descricao; ?>" type="text" name="descricao" class="form-control" placeholder=" Ex: Notebook Acer Aspire 5 A515-45-R36L AMD Ryzen R7 12GB RAM SSD 512 GB 15,6">
-                                  </div>
-                                </div>
-                                <div class="col-sm-4">
-                                  <div class="form-group">
-                                    <label>PROMOÇÃO</label>
-                                    <select
-                                      value="<?php echo $promocao; ?>" type="text" name="promocao" class="form-select" id="exampleFormControlSelect1"
-                                      >
-                                        <option>Sim</option>
-                                        <option>Não</option>
-                                      </select>
-                                  </div>
-                                </div>
-                                <td>
-                              <div class="col-sm-6">
-                               <div class="form-group">
-                                <input type="submit" name="<?php echo $action; ?>" class="btn btn-block btn-outline-success btn-lg" value="CADASTRAR">
-                                </td>
-                            </form>
-                              </div>
-                            </form>
-                          </div>
-                          <!-- /.card-body -->
+                    <!-- Nome do Produto -->
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>NOME DO PRODUTO</label>
+                            <input value="<?php echo htmlspecialchars($nome); ?>" type="text" name="nome" class="form-control" placeholder="Ex: NOTEBOOK GAMER" required>
                         </div>
-                      <!-- ./col -->
                     </div>
-                  </div><!-- /.container-fluid -->
-                </section>
+
+                    <!-- Imagem -->
+                    <div>
+                        <?php if (!empty($itemProduto['imagem'])) { ?>
+                            <img src="imagens/uploads/<?php echo htmlspecialchars($itemProduto['imagem']); ?>" alt="" style="max-width: 200px;">
+                        <?php } ?>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>IMAGEM</label>
+                            <input type="file" name="imagem" class="form-control">
+                        </div>
+                    </div>
+
+                    <!-- Código do Produto -->
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>CÓDIGO DO PRODUTO</label>
+                            <input value="<?php echo htmlspecialchars($codigo); ?>" type="text" name="codigo" class="form-control" placeholder="Ex: 25465998521">
+                        </div>
+                    </div>
+
+                    <!-- Descrição -->
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label>DESCRIÇÃO</label>
+                            <input value="<?php echo htmlspecialchars($descricao); ?>" type="text" name="descricao" class="form-control" placeholder="Descrição do produto">
+                        </div>
+                    </div>
+
+                    <!-- Promoção -->
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>PROMOÇÃO</label>
+                            <select name="promocao" class="form-select">
+                                <option value="Sim" <?php echo ($promocao === 'Sim') ? 'selected' : ''; ?>>Sim</option>
+                                <option value="Não" <?php echo ($promocao === 'Não') ? 'selected' : ''; ?>>Não</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="submit" name="<?php echo $action; ?>" class="btn btn-block btn-outline-success btn-lg" value="<?php echo strtoupper($action); ?>">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
         <!-- Fim tabela de usuario -->
 
         <footer class="footer">

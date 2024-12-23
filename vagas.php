@@ -32,11 +32,39 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+        <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>R. Manoel Inácio de Lucena, 451 - Centro, Brejo Santo - CE, 63260-000</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+55 (88) 3531-4191</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>add@addsolucoes.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-whatsapp fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    
+    <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.php" class="navbar-brand p-0">
-                <img src="img/logo4.png" width="120" height="40" alt="Logo" />
+            <img src="img/logo7.png" width="120" height="40" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -46,11 +74,22 @@
                     <a href="index.php" class="nav-item nav-link">Inicio</a>
                     <a href="sobre.php" class="nav-item nav-link">Sobre</a>
                     <a href="servicos.php" class="nav-item nav-link">Serviços</a>
-                    <a href="vagas.php" class="nav-item nav-link active">Vagas</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Paginas</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="escolha.php" class="dropdown-item active">PORQUE NOS ESCOLHER?</a>
+                            <a href="vagas.php" class="dropdown-item">VAGAS</a>
+                            <a href="testemunhas.php" class="dropdown-item">O QUE FALAM DA ADD SOLUÇÕES</a>
+                            <a href="orcamento.php" class="dropdown-item">ORÇAMENTOS</a>
+                        </div>
+                    </div>
                     <a href="contato.php" class="nav-item nav-link">Contato</a>
                 </div>
+                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <a href="pagloja.php" class="btn btn-primary py-2 px-4 ms-3">ENTRAR NA LOJA</a>
             </div>
         </nav>
+
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
@@ -60,6 +99,16 @@
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener('scroll', function () {
+            const logo = document.querySelector('.navbar-brand img');
+            if (window.scrollY > 50) {
+                logo.src = 'img/logo6.png';
+            } else {
+                logo.src = 'img/logo7.png';
+            }
+        });
+    </script>
 
     <!-- Vagas Section Start -->
     <div class="container py-5">
@@ -97,13 +146,29 @@
             </div>
         </div>
     </div>
-    <!-- Vagas Section End -->
-
-    <!-- Footer -->
-    <?php include_once "footer.php"; ?>
+    <!-- Vendor End -->
     
+
+    <!-- Footer Start -->
+    <?php
+        include_once "footer.php"
+    ?>
+    <!-- Footer End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

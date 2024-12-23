@@ -92,7 +92,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.php" class="navbar-brand p-0">
-            <img src="img/logo4.png" width="120" height="40" alt="Logo" />
+            <img src="img/logo7.png" width="120" height="40" alt="Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -106,7 +106,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Paginas</a>
                         <div class="dropdown-menu m-0">
                             <a href="escolha.php" class="dropdown-item active">PORQUE NOS ESCOLHER?</a>
-                            <a href="team.php" class="dropdown-item">NOSSO TIME</a>
+                            <a href="vagas.php" class="dropdown-item">VAGAS</a>
                             <a href="testemunhas.php" class="dropdown-item">O QUE FALAM DA ADD SOLUÇÕES</a>
                             <a href="orcamento.php" class="dropdown-item">ORÇAMENTOS</a>
                         </div>
@@ -135,9 +135,9 @@
         window.addEventListener('scroll', function () {
             const logo = document.querySelector('.navbar-brand img');
             if (window.scrollY > 50) {
-                logo.src = 'img/logo5.png';
+                logo.src = 'img/logo6.png';
             } else {
-                logo.src = 'img/logo4.png';
+                logo.src = 'img/logo7.png';
             }
         });
     </script>

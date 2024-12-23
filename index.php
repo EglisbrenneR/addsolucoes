@@ -97,7 +97,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <a href="index.php" class="navbar-brand p-0">
-        <img src="img/logo4.png" width="120" height="40" alt="Logo" class="borda-branca" />
+        <img src="img/logo7.png" width="120" height="40" alt="Logo" class="borda-branca" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -111,7 +111,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Paginas</a>
                         <div class="dropdown-menu m-0">
                             <a href="escolha.php" class="dropdown-item">PORQUE NOS ESCOLHER?</a>
-                            <a href="team.php" class="dropdown-item">NOSSO TIME</a>
+                            <a href="vagas.php" class="dropdown-item">VAGAS</a>
                             <a href="testemunhas.php" class="dropdown-item">O QUE FALAM DA ADD SOLUÇÕES</a>
                             <a href="orcamento.php" class="dropdown-item">ORÇAMENTOS</a>
                         </div>
@@ -227,9 +227,9 @@
         window.addEventListener('scroll', function () {
             const logo = document.querySelector('.navbar-brand img');
             if (window.scrollY > 50) {
-                logo.src = 'img/logo5.png';
+                logo.src = 'img/logo6.png';
             } else {
-                logo.src = 'img/logo4.png';
+                logo.src = 'img/logo7.png';
             }
         });
     </script>
@@ -571,15 +571,15 @@
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
+                    <img src="img/Parceiro-1.jpg" alt="">
+                    <img src="img/Parceiro-2.jpg" alt="">
+                    <img src="img/Parceiro-3.jpg"alt="">
+                    <img src="img/Parceiro-4.jpg" alt="">
+                    <img src="img/Parceiro-5.jpg" alt="">
+                    <img src="img/Parceiro-6.jpg" alt="">
+                    <img src="img/Parceiro-7.jpg" alt="">
+                    <img src="img/Parceiro-8.jpg" alt="">
+                    <img src="img/Parceiro-9.jpg" alt="">
                 </div>
             </div>
         </div>
