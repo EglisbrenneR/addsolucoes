@@ -148,6 +148,13 @@
                       </a>
                     </li>
                     <?php } ?>
+                    <?php if($_SESSION['usuario']['acesso'] == '1'){ ?>
+                      <li>
+                    <a href="cadvagas.php">
+                        <span class="sub-item">CADASTRO DE VAGAS</span>
+                      </a>
+                    </li>
+                    <?php } ?>
                   </ul>
                 </div>
               </li>

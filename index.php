@@ -126,7 +126,7 @@
         <div id="header-carousel" class="carousel slide c" data-bs-ride="carousel"> 
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-3.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">CRIATIVIDADE E INOVAÇÃO</h5>
@@ -137,11 +137,44 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="img/carousel-4.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Contrate uma</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Empresa Qualificada</h1>
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Contrate uma empresa que garante</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Qualidade Nos Serviços</h1>
+                            <a href="orcamento.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamentos Gratuitos</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contrate-nos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-5.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Invista em Segurança Para</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">SUA EMPRESA E FAMILIA</h1>
+                            <a href="orcamento.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamentos Gratuitos</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contrate-nos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-6.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Automatize Sua Empresa</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Sistemas Para Automação</h1>
+                            <a href="orcamento.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamentos Gratuitos</a>
+                            <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contrate-nos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/carousel-7.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Reparo de computadores e Notebooks com</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Segurança e Confiança</h1>
                             <a href="orcamento.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Orçamentos Gratuitos</a>
                             <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contrate-nos</a>
                         </div>
@@ -193,7 +226,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Clientes Satisfeitos</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">123</h1>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">1528</h1>
                         </div>
                     </div>
                 </div>
@@ -204,7 +237,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-primary mb-0">Projetos Concluidos</h5>
-                            <h1 class="mb-0" data-toggle="counter-up">123</h1>
+                            <h1 class="mb-0" data-toggle="counter-up">11532</h1>
                         </div>
                     </div>
                 </div>
@@ -215,7 +248,7 @@
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white mb-0">Prêmios Ganhos</h5>
-                            <h1 class="text-white mb-0" data-toggle="counter-up">123</h1>
+                            <h1 class="text-white mb-0" data-toggle="counter-up">67</h1>
                         </div>
                     </div>
                 </div>
@@ -275,7 +308,7 @@
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about-2.JPEG" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -447,121 +480,52 @@
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
+                        <img class="img-fluid rounded" src="img/testimonial-6.jpg" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                            <h4 class="text-primary mb-1">Nome do Cliente</h4>
+                            <h4 class="text-primary mb-1">SARAH PAZ</h4>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                    Fiquei extremamente satisfeito com o serviço! A equipe foi atenciosa e superou minhas expectativas. Com certeza voltarei a utilizar e recomendo para todos!
+                    Fiquei extremamente satisfeito com o serviço! A equipe foi atenciosa e superou minhas expectativas. 
                     </div>
                 </div>
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
+                        <img class="img-fluid rounded" src="img/testimonial-9.jpg" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                        <h4 class="text-primary mb-1">Nome do Cliente</h4>
+                        <h4 class="text-primary mb-1">FELIPE FERNANDES</h4>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                    Fiquei extremamente satisfeito com o serviço! A equipe foi atenciosa e superou minhas expectativas. Com certeza voltarei a utilizar e recomendo para todos!
+                    Graças à ADD Soluções, conseguimos otimizar nossos processos e melhorar a experiência dos nossos clientes.
                     </div>
                 </div>
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
+                        <img class="img-fluid rounded" src="img/testimonial-7.jpg" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                        <h4 class="text-primary mb-1">Nome do Cliente</h4>>
+                        <h4 class="text-primary mb-1">FERNADO CUNHA</h4>>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                    Fiquei extremamente satisfeito com o serviço! A equipe foi atenciosa e superou minhas expectativas. Com certeza voltarei a utilizar e recomendo para todos!
+                    A parceria com a ADD Soluções é sinônimo de inovação e sucesso. Resolveram nossos problemas com agilidade e competência.
                     </div>
                 </div>
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
+                        <img class="img-fluid rounded" src="img/testimonial-8.jpg" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                        <h4 class="text-primary mb-1">Nome do Cliente</h4>
+                        <h4 class="text-primary mb-1">RAFAEL SOARES</h4>
                         </div>
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                    Fiquei extremamente satisfeito com o serviço! A equipe foi atenciosa e superou minhas expectativas. Com certeza voltarei a utilizar e recomendo para todos!
+                    Eles ouviram nossas necessidades e desenvolveram exatamente o que precisávamos. ADD Soluções faz a diferença!
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Testimonial End -->
-
-
-<!-- Team Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Nosso Time</h5>
-                <h1 class="mb-0">Temos profissionais prontos para ajudar você e o seu negócio</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                            <h4 class="text-primary">NOME SOBRENOME</h4>
-                            <p class="text-uppercase m-0">TECNICO DE INFOMATICA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                        <h4 class="text-primary">NOME SOBRENOME</h4>
-                        <p class="text-uppercase m-0">TECNICO DE INFOMATICA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center py-4">
-                        <h4 class="text-primary">NOME SOBRENOME</h4>
-                        <p class="text-uppercase m-0">TECNICO DE INFOMATICA</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-
-   
 
     <!-- Vendor Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
